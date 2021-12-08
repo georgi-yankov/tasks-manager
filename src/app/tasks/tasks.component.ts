@@ -27,7 +27,7 @@ export class TasksComponent implements OnInit {
   }
 
 
-  getTasks(): void {
+  private getTasks(): void {
     this.taskService.getTasks()
         .subscribe(tasks => {
           this.tasks = tasks;
