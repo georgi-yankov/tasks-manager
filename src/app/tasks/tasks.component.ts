@@ -35,6 +35,10 @@ export class TasksComponent implements OnInit {
         });
   }
   
+  /**
+   * Gets the new added task through the child
+   * component template "<app-add-task>"
+   */ 
   updateTasks(task: Task): void {
     this.tasks.push(task);
   }
