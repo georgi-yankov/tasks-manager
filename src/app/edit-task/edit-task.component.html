@@ -1,0 +1,25 @@
+<div id="edit-task" *ngIf="task">
+	<h2 class="display-6">Edit your task</h2>
+	<input
+		[(ngModel)]="task.title"
+		class="form-control list-group-item list-group-item-action rounded-1"
+		[class.list-group-item-danger]="task.important === true"
+		type="text">
+
+	<div class="form-check">
+	  <input [(ngModel)]="task.important" class="form-check-input" type="checkbox" id="important-check">
+	  <label class="form-check-label" for="important-check">
+	    important
+	  </label>
+	</div>
+
+	<button
+		type="button" class="btn btn-secondary btn-sm go-back"
+		(click)="goBack()">go back
+	</button>
+
+	<button
+		type="button" class="btn btn-primary btn-sm"
+		(click)="save()">save
+	</button>
+</div>

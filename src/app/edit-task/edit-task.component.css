@@ -1,0 +1,21 @@
+h2 {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+#edit-task {
+	/*margin-bottom: 30px;*/
+}
+
+#edit-task .form-control {
+	border: 1px solid rgba(0,0,0,.125);	
+	margin-bottom: 10px;
+}
+
+#edit-task .form-check {
+	margin-bottom: 10px;
+}
+
+button.go-back {
+	margin-right: 10px;
+}

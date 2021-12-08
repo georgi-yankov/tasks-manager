@@ -1,0 +1,57 @@
+<header>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <h1>
+        <a class="navbar-brand" routerLink="/">{{ title }}</a>
+      </h1>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbar"
+        aria-controls="navbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar">
+
+        <ul class="navbar-nav me-auto mb-2">
+
+          <li class="nav-item">
+            <a
+              routerLink="/tasks"
+              class="nav-link"
+              [class.active]="activeNavItem === 'tasks'"
+              (click)="checkNavItem('tasks')">Tasks
+                <span *ngIf="taskService.numberOfTasks > 0">
+                  ({{ taskService.numberOfTasks }})
+                </span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              routerLink="/trash"
+              class="nav-link"
+              [class.active]="activeNavItem === 'trash'"
+              (click)="checkNavItem('trash')">Trash
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              routerLink="/search"
+              class="nav-link"
+              [class.active]="activeNavItem === 'search'"
+              (click)="checkNavItem('search')">Search
+            </a>
+          </li>
+
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+</header>

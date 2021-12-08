@@ -1,0 +1,36 @@
+<p>
+  <button
+  	id="new-button"
+  	class="btn btn-secondary btn-sm"
+  	type="button"
+  	data-bs-toggle="collapse"
+  	data-bs-target="#new-task"
+  	aria-expanded="false"
+  	aria-controls="new-task"
+  	title="create new task">new
+  </button>
+</p>
+<div class="collapse" id="new-task">
+	<input
+		#taskTitle
+		class="form-control list-group-item list-group-item-action rounded-1"
+		[class.list-group-item-danger]="isImportant === true"
+		type="text"
+		placeholder="write your task...">
+
+	<div class="form-check">
+	  <input
+	  	[(ngModel)]="isImportant"
+	  	class="form-check-input"
+	  	type="checkbox"
+	  	id="important-check">
+	  <label class="form-check-label" for="important-check">
+	    important
+	  </label>
+	</div>
+
+	<button
+		type="button" class="btn btn-primary btn-sm"
+		(click)="add(taskTitle.value); taskTitle.value=''; isImportant=false">add
+	</button>
+</div>

@@ -1,0 +1,28 @@
+.list-group-item {
+  border: 1px solid rgba(0,0,0,.125);
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.list-group-item a {
+  display: block;
+  float: left;
+  max-width: 85%;
+  overflow-wrap: break-word;
+}
+
+button.delete {
+  position: absolute;
+  right:  16px;
+
+  background-color: white;
+  border-width: 1px;
+  color:  #525252;
+  line-height: 18px;
+  padding: 1px 8px 3px 8px;
+}
+
+button.delete:hover {
+  background-color: #525252;
+  color: white;
+}

@@ -1,0 +1,6 @@
+TODOs
+
+1. Trash functionality
+2. Pagination functionality
+
+3. To sort tasks, show important tasks first

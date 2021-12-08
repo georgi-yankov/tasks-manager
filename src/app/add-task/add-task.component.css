@@ -1,0 +1,12 @@
+#new-task {
+	margin-bottom: 30px;
+}
+
+#new-task .form-control {
+	border: 1px solid rgba(0,0,0,.125);	
+	margin-bottom: 10px;
+}
+
+#new-task .form-check {
+	margin-bottom: 10px;
+}
