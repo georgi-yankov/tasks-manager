@@ -46,8 +46,12 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // It's needed just to show in the header menu
-    // how many tasks are available
+    /**
+     * It's needed just to show in the header menu
+     * how many tasks are available
+     * 
+     * .subscribe() is used because getTasks() returns an Observable
+     */ 
     this.taskService.getTasks().subscribe();
   }
 
