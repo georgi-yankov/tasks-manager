@@ -12,7 +12,13 @@
     <a>
       <span>{{ task.title }}</span>
     </a>
+
+    <!--
+    On click, the "event.stopPropagation" prevents from firing the "routerLink"
+    on the parent <li> element, if the element is not deleted fast enough
+    -->
     <button
+      onclick="event.stopPropagation()"
       class="delete"
       title="delete task"
       (click)="delete(task)">x
