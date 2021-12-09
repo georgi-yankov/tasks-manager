@@ -27,7 +27,7 @@ export class TasksComponent implements OnInit {
   }
 
 
-  getTasks(): void {
+  private getTasks(): void {
     this.taskService.getTasks()
         .subscribe(tasks => {
           this.tasks = tasks;
@@ -35,13 +35,18 @@ export class TasksComponent implements OnInit {
         });
   }
   
+  /**
+   * Gets the new added task through the child
+   * component template "<app-add-task>"
+   */ 
   updateTasks(task: Task): void {
     this.tasks.push(task);
   }
 
   delete(task: Task): void {
-    this.tasks = this.tasks.filter(t => t !== task);
-    this.taskService.deleteTask(task.id).subscribe();
+    this.taskService.deleteTask(task.id).subscribe(
+      () => { this.tasks = this.tasks.filter(t => t !== task) }
+    );
   }
 
 }
