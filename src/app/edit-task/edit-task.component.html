@@ -4,7 +4,8 @@
 		[(ngModel)]="task.title"
 		class="form-control list-group-item list-group-item-action rounded-1"
 		[class.list-group-item-danger]="task.important === true"
-		type="text">
+		type="text"
+		(keyup.enter)="save()">
 
 	<div class="form-check">
 	  <input [(ngModel)]="task.important" class="form-check-input" type="checkbox" id="important-check">
