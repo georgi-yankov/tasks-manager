@@ -16,7 +16,8 @@
 		class="form-control list-group-item list-group-item-action rounded-1"
 		[class.list-group-item-danger]="isImportant === true"
 		type="text"
-		placeholder="write your task...">
+		placeholder="write your task..."
+		(keyup.enter)="add(taskTitle.value); taskTitle.value=''; isImportant=false">
 
 	<div class="form-check">
 	  <input
